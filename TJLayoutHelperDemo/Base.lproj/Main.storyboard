@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4hv-xW-aDh">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TJLayoutHelperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psY-jf-xeC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="nhX-mb-fFT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGA-FS-hPz">
+                                <rect key="frame" x="20" y="40" width="335" height="164.66666666666666"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwk-IT-APq">
+                                <rect key="frame" x="20" y="224.66666666666663" width="335" height="164.33333333333337"/>
+                                <color key="backgroundColor" red="0.91000002619999998" green="0.086000002919999999" blue="0.27500000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-vO-Sx8">
+                                <rect key="frame" x="20" y="409" width="335" height="164.66666666666663"/>
+                                <color key="backgroundColor" name="BlueAppColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-84-x1I">
+                                <rect key="frame" x="20" y="593.66666666666663" width="335" height="164.33333333333337"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RnT-vO-Sx8" firstAttribute="leading" secondItem="qGA-FS-hPz" secondAttribute="leading" id="4ha-8B-pHz"/>
+                            <constraint firstAttribute="trailing" secondItem="psY-jf-xeC" secondAttribute="trailing" id="5E6-mr-LG2"/>
+                            <constraint firstItem="ge7-84-x1I" firstAttribute="leading" secondItem="qGA-FS-hPz" secondAttribute="leading" id="CqG-40-HpL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ge7-84-x1I" secondAttribute="bottom" constant="20" id="GCk-Hs-sWg" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyRatio" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="ge7-84-x1I" firstAttribute="height" secondItem="Pwk-IT-APq" secondAttribute="height" id="Hgr-sN-nfg"/>
+                            <constraint firstItem="Pwk-IT-APq" firstAttribute="trailing" secondItem="qGA-FS-hPz" secondAttribute="trailing" id="T8V-Tv-4JK"/>
+                            <constraint firstItem="RnT-vO-Sx8" firstAttribute="trailing" secondItem="qGA-FS-hPz" secondAttribute="trailing" id="TFP-uM-LeE"/>
+                            <constraint firstItem="Pwk-IT-APq" firstAttribute="top" secondItem="qGA-FS-hPz" secondAttribute="bottom" constant="20" id="Yta-U9-F53" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyRatio" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qGA-FS-hPz" secondAttribute="trailing" constant="20" id="b3I-tk-Qlh" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyRatio" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="ge7-84-x1I" firstAttribute="top" secondItem="RnT-vO-Sx8" secondAttribute="bottom" constant="20" id="cBL-ox-7PX" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyRatio" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="qGA-FS-hPz" firstAttribute="top" secondItem="psY-jf-xeC" secondAttribute="bottom" constant="20" id="gO7-55-1bR"/>
+                            <constraint firstItem="ge7-84-x1I" firstAttribute="height" secondItem="qGA-FS-hPz" secondAttribute="height" id="gSs-P4-vFy"/>
+                            <constraint firstItem="qGA-FS-hPz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hj0-m9-wv9" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyRatio" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="psY-jf-xeC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ifw-Ab-jDf"/>
+                            <constraint firstItem="ge7-84-x1I" firstAttribute="height" secondItem="RnT-vO-Sx8" secondAttribute="height" id="mkm-P0-zib"/>
+                            <constraint firstItem="RnT-vO-Sx8" firstAttribute="top" secondItem="Pwk-IT-APq" secondAttribute="bottom" constant="20" id="n7U-hV-PGR" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyRatio" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="Pwk-IT-APq" firstAttribute="leading" secondItem="qGA-FS-hPz" secondAttribute="leading" id="nVE-JY-p8v"/>
+                            <constraint firstItem="ge7-84-x1I" firstAttribute="trailing" secondItem="qGA-FS-hPz" secondAttribute="trailing" id="ocy-3R-GIX"/>
+                            <constraint firstItem="psY-jf-xeC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xf7-Nc-ZNq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="consBlueViewTop" destination="n7U-hV-PGR" id="TEM-B5-Ucj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="126.38680659670166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GRO-Lk-TnD">
+            <objects>
+                <viewController id="fDB-AR-gWo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b81-Zg-O7e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-UP-Aqq">
+                                <rect key="frame" x="20" y="60" width="335" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dsy-Je-PxL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fnO-UP-Aqq" firstAttribute="leading" secondItem="2GF-ez-gN4" secondAttribute="leading" constant="20" id="Wln-NH-pLA" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="XSpace">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inch5_5Space">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="2GF-ez-gN4" firstAttribute="trailing" secondItem="fnO-UP-Aqq" secondAttribute="trailing" constant="20" id="ZN9-KM-pVY" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="XSpace">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inch5_5Space">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="fnO-UP-Aqq" firstAttribute="top" secondItem="2GF-ez-gN4" secondAttribute="top" constant="16" id="d46-xo-Z6g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2GF-ez-gN4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csh-hh-Km0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="154"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kkk-fF-HRl">
+            <objects>
+                <viewController id="4hv-xW-aDh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5LG-LW-Wt8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd9-hb-rBH">
+                                <rect key="frame" x="166.66666666666666" y="44" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bd9-hb-rBH" firstAttribute="centerX" secondItem="BGY-4r-5vB" secondAttribute="centerX" id="FJu-Dd-wzd"/>
+                            <constraint firstItem="Bd9-hb-rBH" firstAttribute="top" secondItem="BGY-4r-5vB" secondAttribute="top" id="asa-9C-LtW" customClass="TJLayoutHelper" customModule="TJLayoutHelperDemo" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="XSpace">
+                                        <real key="value" value="400"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inch9_7_and_10_5">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inch12_9">
+                                        <real key="value" value="800"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BGY-4r-5vB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9f-tg-eyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BlueAppColor">
+            <color red="0.16862745100000001" green="0.10980392160000001" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
