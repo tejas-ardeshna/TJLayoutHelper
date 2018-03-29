@@ -77,8 +77,8 @@ import UIKit
     }
 
     /// this method will identify device
-    func adjustSpaceForConstraint(){
-        if isConstantAltered{return}
+    func adjustSpaceForConstraint() {
+        if isConstantAltered { return }
         switch UIDevice.current.screenType {
         case .iPhones_5_5s_5c_SE:
             self.addConstant(addition: inch4Space)
