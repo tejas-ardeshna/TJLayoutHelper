@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable class TJLayoutHelper: NSLayoutConstraint {
-    
+
     // MARK: - Variables
     @IBInspectable var applyRatio: Bool = false {
         didSet {
@@ -19,7 +19,7 @@ import UIKit
     
     @IBInspectable var XSpace: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPhoneX{
+            if UIDevice.current.screenType == .iPhoneX {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -27,7 +27,7 @@ import UIKit
     
     @IBInspectable var inch4Space: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPhones_5_5s_5c_SE{
+            if UIDevice.current.screenType == .iPhones_5_5s_5c_SE {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -35,7 +35,7 @@ import UIKit
     
     @IBInspectable var inch4_7Space: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPhones_6_6s_7_8{
+            if UIDevice.current.screenType == .iPhones_6_6s_7_8 {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -43,7 +43,7 @@ import UIKit
     
     @IBInspectable var inch5_5Space: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPhones_6Plus_6sPlus_7Plus_8Plus{
+            if UIDevice.current.screenType == .iPhones_6Plus_6sPlus_7Plus_8Plus {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -51,7 +51,7 @@ import UIKit
     
     @IBInspectable var inch9_7_and_10_5: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPad{
+            if UIDevice.current.screenType == .iPad {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -59,7 +59,7 @@ import UIKit
     
     @IBInspectable var inch12_9: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPad_Pro{
+            if UIDevice.current.screenType == .iPad_Pro {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -75,8 +75,7 @@ import UIKit
     
     override func awakeFromNib() {
     }
-    
-    
+
     /// this method will identify device
     func adjustSpaceForConstraint(){
         if isConstantAltered{return}
@@ -98,8 +97,7 @@ import UIKit
         }
         isConstantAltered = true // so constrain won't modify twice
     }
-    
-    
+
     /// this will add extra space according to device
     ///
     /// - Parameter addition: extra space in pixel
@@ -110,7 +108,7 @@ import UIKit
         {
             let h         = UIDevice.current.orientation == .portrait ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width
             // TODO:- Change screen size  if you are designing in other devices rather then 4 inch iphone to your screen size
-            let ratio     = self.constant * h / 568 //568 because we have designed in iphone 5, modify if your desings in other iphone
+            let ratio     = self.constant * h / 568 // 568 because we have designed in iphone 5, modify if your desings in other iphone
             self.constant += (addition == 0.0 ? ratio : addition)
         }
         else
@@ -118,6 +116,7 @@ import UIKit
             self.constant += addition
         }
     }
+
 }
 
 extension UIDevice {
