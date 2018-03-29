@@ -43,9 +43,20 @@ func modifyConstraintAccordingToScreenSize()
 ## TODO
 - [x] Add support for landscape orientation
 
-### caution
+## Caution
 
 Don't use apply ratio and extra space togather
+
+## Contribute
+
+We would love you for the contribution to **TJBioAuthentication**, check the ``LICENSE`` file for more info.
+
+## Author
+
+Tejas Ardeshna – [@tejas_ardeshna](https://twitter.com/tejas_ardeshna), 
+iOS developer at [Simform solutoions PVT. LTD.](https://github.com/simformsolutions)
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [swift-image]:https://img.shields.io/badge/swift-4-orange.svg
 [swift-url]: https://swift.org/
