@@ -49,7 +49,7 @@ Don't use apply ratio and extra space togather
 
 ## Contribute
 
-We would love you for the contribution to **TJBioAuthentication**, check the ``LICENSE`` file for more info.
+We would love you for the contribution to **TJLayoutHelper**, check the ``LICENSE`` file for more info.
 
 ## Author
 
