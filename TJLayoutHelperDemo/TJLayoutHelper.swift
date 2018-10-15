@@ -17,9 +17,25 @@ import UIKit
         }
     }
     
-    @IBInspectable var XSpace: CGFloat = 0.0 {
+    @IBInspectable var X_XsSpace: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPhoneX {
+            if UIDevice.current.screenType == .iPhoneX_Xs {
+                self.adjustSpaceForConstraint()
+            }
+        }
+    }
+
+    @IBInspectable var XrSpace: CGFloat = 0.0 {
+        didSet {
+            if UIDevice.current.screenType == .iPhoneXr {
+                self.adjustSpaceForConstraint()
+            }
+        }
+    }
+
+    @IBInspectable var XsMaxSpace: CGFloat = 0.0 {
+        didSet {
+            if UIDevice.current.screenType == .iPhoneXsMax {
                 self.adjustSpaceForConstraint()
             }
         }
@@ -77,13 +93,17 @@ import UIKit
     }
 
     /// this method will identify device
-    func adjustSpaceForConstraint(){
-        if isConstantAltered{return}
+    func adjustSpaceForConstraint() {
+        if isConstantAltered { return }
         switch UIDevice.current.screenType {
         case .iPhones_5_5s_5c_SE:
             self.addConstant(addition: inch4Space)
-        case .iPhoneX:
+        case .iPhoneX_Xs:
             self.addConstant(addition: XSpace)
+        case .iPhoneXr:
+            self.addConstant(addition: XrSpace)
+        case .iPhoneXsMax:
+            self.addConstant(addition: XsMaxSpace)
         case .iPhones_6_6s_7_8:
             self.addConstant(addition: inch4_7Space)
         case .iPhones_6Plus_6sPlus_7Plus_8Plus:
@@ -127,14 +147,16 @@ extension UIDevice {
         case iPhones_5_5s_5c_SE = "iPhone 5, iPhone 5s, iPhone 5c or iPhone SE"
         case iPhones_6_6s_7_8 = "iPhone 6, iPhone 6S, iPhone 7 or iPhone 8"
         case iPhones_6Plus_6sPlus_7Plus_8Plus = "iPhone 6 Plus, iPhone 6S Plus, iPhone 7 Plus or iPhone 8 Plus"
-        case iPhoneX = "iPhone X"
+        case iPhoneX_Xs = "iPhone X, iPhone Xs"
+        case iPhoneXr = "iPhone Xr"
+        case iPhoneXsMax = "iPhone Xs Max"
         case iPad = "iPad"
         case iPad_Pro = "iPad Pro"
         case unknown // for future if there will be new screen size
     }
     
     // MARK: - Variables
-    var iPhoneX: Bool {
+    var iPhoneX_Xs: Bool {
         return UIScreen.main.nativeBounds.height == 2436
     }
     var iPhone: Bool {
@@ -151,7 +173,11 @@ extension UIDevice {
         case 1920, 2208:
             return .iPhones_6Plus_6sPlus_7Plus_8Plus
         case 2436:
-            return .iPhoneX
+            return .iPhoneX_Xs
+        case 1792:
+            return .iPhoneXr
+        case 2688:
+            return .iPhoneXsMax
         case 2048:
             return .iPad
         case 2732:
@@ -161,3 +187,4 @@ extension UIDevice {
         }
     }
 }
+
