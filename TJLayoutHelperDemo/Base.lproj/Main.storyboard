@@ -178,6 +178,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="XrSpace">
                                         <real key="value" value="200"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="X_XsSpace">
+                                        <real key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                         </constraints>
