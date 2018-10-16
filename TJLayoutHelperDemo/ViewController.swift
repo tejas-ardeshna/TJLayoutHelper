@@ -20,7 +20,7 @@ class ViewController: UIViewController {
             consBlueViewTop.constant += 7  // Add 7 pixel more space for 4.7 inch device
         case .iPhones_6Plus_6sPlus_7Plus_8Plus:
             consBlueViewTop.constant += 10 // Add 10 pixel more space for 5.5 inch device
-        case .iPhoneX:
+        case .iPhoneX_Xs:
             consBlueViewTop.constant += 15 // And add 15 pixel space for iPhone X
         default:
             break
