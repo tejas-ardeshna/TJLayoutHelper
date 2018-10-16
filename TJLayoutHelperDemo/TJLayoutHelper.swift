@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable class TJLayoutHelper: NSLayoutConstraint {
 
-    // MARK: - Variables
+    // MARK:- Variables
     @IBInspectable var applyRatio: Bool = false {
         didSet {
             self.adjustSpaceForConstraint()
@@ -28,6 +28,14 @@ import UIKit
     @IBInspectable var XrSpace: CGFloat = 0.0 {
         didSet {
             if UIDevice.current.screenType == .iPhoneXr {
+                self.adjustSpaceForConstraint()
+            }
+        }
+    }
+    
+    @IBInspectable var XSpace: CGFloat = 0.0 {
+        didSet {
+            if UIDevice.current.screenType == .iPhoneX_Xs {
                 self.adjustSpaceForConstraint()
             }
         }
