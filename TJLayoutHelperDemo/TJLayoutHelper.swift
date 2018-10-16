@@ -32,14 +32,6 @@ import UIKit
             }
         }
     }
-    
-    @IBInspectable var XSpace: CGFloat = 0.0 {
-        didSet {
-            if UIDevice.current.screenType == .iPhoneX_Xs {
-                self.adjustSpaceForConstraint()
-            }
-        }
-    }
 
     @IBInspectable var XsMaxSpace: CGFloat = 0.0 {
         didSet {
@@ -107,7 +99,7 @@ import UIKit
         case .iPhones_5_5s_5c_SE:
             self.addConstant(addition: inch4Space)
         case .iPhoneX_Xs:
-            self.addConstant(addition: XSpace)
+            self.addConstant(addition: X_XsSpace)
         case .iPhoneXr:
             self.addConstant(addition: XrSpace)
         case .iPhoneXsMax:

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             break
         }
         consBlueViewTop.inch5_5Space = 20
-        consBlueViewTop.XSpace       = 30
+        consBlueViewTop.X_XsSpace       = 30
     }
     
     override func viewDidLoad() {
