@@ -16,7 +16,7 @@ import UIKit
             self.adjustSpaceForConstraint()
         }
     }
-    
+
     @IBInspectable var X_XsSpace: CGFloat = 0.0 {
         didSet {
             if UIDevice.current.screenType == .iPhoneX_Xs {
@@ -32,7 +32,7 @@ import UIKit
             }
         }
     }
-    
+
     @IBInspectable var XSpace: CGFloat = 0.0 {
         didSet {
             if UIDevice.current.screenType == .iPhoneX_Xs {
@@ -48,7 +48,7 @@ import UIKit
             }
         }
     }
-    
+
     @IBInspectable var inch4Space: CGFloat = 0.0 {
         didSet {
             if UIDevice.current.screenType == .iPhones_5_5s_5c_SE {
@@ -56,7 +56,7 @@ import UIKit
             }
         }
     }
-    
+
     @IBInspectable var inch4_7Space: CGFloat = 0.0 {
         didSet {
             if UIDevice.current.screenType == .iPhones_6_6s_7_8 {
@@ -64,7 +64,7 @@ import UIKit
             }
         }
     }
-    
+
     @IBInspectable var inch5_5Space: CGFloat = 0.0 {
         didSet {
             if UIDevice.current.screenType == .iPhones_6Plus_6sPlus_7Plus_8Plus {
@@ -72,31 +72,47 @@ import UIKit
             }
         }
     }
-    
-    @IBInspectable var inch9_7_and_10_5: CGFloat = 0.0 {
+
+    @IBInspectable var inch9_7: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPad {
+            if UIDevice.current.screenType == .iPad_9_7 {
                 self.adjustSpaceForConstraint()
             }
         }
     }
-    
+
+    @IBInspectable var inch_10_5: CGFloat = 0.0 {
+        didSet {
+            if UIDevice.current.screenType == .iPad_10_5 {
+                self.adjustSpaceForConstraint()
+            }
+        }
+    }
+
+    @IBInspectable var inch_11: CGFloat = 0.0 {
+        didSet {
+            if UIDevice.current.screenType == .iPad_11 {
+                self.adjustSpaceForConstraint()
+            }
+        }
+    }
+
     @IBInspectable var inch12_9: CGFloat = 0.0 {
         didSet {
-            if UIDevice.current.screenType == .iPad_Pro {
+            if UIDevice.current.screenType == .iPad_12_9 {
                 self.adjustSpaceForConstraint()
             }
         }
     }
-    
+
     var isConstantAltered = false
-    
+
     // MARK: -
     // MARK: - Initialisers
     override init() {
         super.init()
     }
-    
+
     override func awakeFromNib() {
     }
 
@@ -116,9 +132,13 @@ import UIKit
             self.addConstant(addition: inch4_7Space)
         case .iPhones_6Plus_6sPlus_7Plus_8Plus:
             self.addConstant(addition: inch5_5Space)
-        case .iPad:
-            self.addConstant(addition: inch9_7_and_10_5)
-        case .iPad_Pro:
+        case .iPad_9_7:
+            self.addConstant(addition: inch9_7)
+        case .iPad_10_5:
+            self.addConstant(addition: inch_10_5)
+        case .iPad_11:
+            self.addConstant(addition: inch_11)
+        case .iPad_12_9:
             self.addConstant(addition: inch12_9)
         default:
             break
@@ -148,8 +168,8 @@ import UIKit
 }
 
 extension UIDevice {
-    
-    
+
+
     enum ScreenType: String {
         case iPhone4_4S = "iPhone 4 or iPhone 4S"
         case iPhones_5_5s_5c_SE = "iPhone 5, iPhone 5s, iPhone 5c or iPhone SE"
@@ -158,11 +178,13 @@ extension UIDevice {
         case iPhoneX_Xs = "iPhone X, iPhone Xs"
         case iPhoneXr = "iPhone Xr"
         case iPhoneXsMax = "iPhone Xs Max"
-        case iPad = "iPad"
-        case iPad_Pro = "iPad Pro"
+        case iPad_9_7 = "iPad 9.7"
+        case iPad_10_5 = "iPad 10.5"
+        case iPad_11 = "iPad 11"
+        case iPad_12_9 = "iPad 12.9"
         case unknown // for future if there will be new screen size
     }
-    
+
     // MARK: - Variables
     var iPhoneX_Xs: Bool {
         return UIScreen.main.nativeBounds.height == 2436
@@ -187,9 +209,13 @@ extension UIDevice {
         case 2688:
             return .iPhoneXsMax
         case 2048:
-            return .iPad
+            return .iPad_9_7
+        case 2224:
+            return .iPad_10_5
+        case 2388:
+            return .iPad_11
         case 2732:
-            return .iPad_Pro
+            return .iPad_12_9
         default:
             return .unknown
         }
